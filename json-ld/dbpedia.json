@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.dbpedia.org/",
+  "name": "DBpedia",
+  "url": "https://www.dbpedia.org/",
+  "description": "DBpedia is a community project that extracts structured data from Wikipedia and publishes it as Linked Open Data on the Web. It provides a SPARQL endpoint, a Lookup Service for entity resolution, a Spotlight API for text annotation, a Live endpoint for real-time Wikipedia data, and Linked Data access via HTTP content negotiation — forming a queryable cross-linked knowledge graph of Wikipedia-derived facts.",
+  "sameAs": [
+    "https://github.com/dbpedia",
+    "https://forum.dbpedia.org/"
+  ],
+  "knowsAbout": [
+    "Linked Data",
+    "Knowledge Graph",
+    "SPARQL",
+    "Semantic Web",
+    "Wikipedia",
+    "Open Data",
+    "Entity Linking",
+    "RDF",
+    "Ontology"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "DBpedia APIs",
+    "itemListElement": [
+      {
+        "@type": "WebAPI",
+        "@id": "https://dbpedia.org/sparql",
+        "name": "DBpedia SPARQL Endpoint",
+        "description": "Public SPARQL 1.1 query endpoint backed by OpenLink Virtuoso over the DBpedia knowledge graph derived from Wikipedia. Supports up to 10,000 result rows, 120-second query timeout, and 100 requests/second per IP.",
+        "url": "https://www.dbpedia.org/resources/sparql/",
+        "endpointURL": "https://dbpedia.org/sparql",
+        "documentation": "https://www.dbpedia.org/resources/sparql/"
+      },
+      {
+        "@type": "WebAPI",
+        "@id": "https://lookup.dbpedia.org/api",
+        "name": "DBpedia Lookup Service",
+        "description": "REST API for entity retrieval and auto-complete over the DBpedia knowledge graph. Resolves plain-text keywords to DBpedia resource URIs via /api/search and /api/prefix.",
+        "url": "https://www.dbpedia.org/resources/lookup/",
+        "endpointURL": "https://lookup.dbpedia.org/api",
+        "documentation": "https://www.dbpedia.org/resources/lookup/",
+        "codeRepository": "https://github.com/dbpedia/dbpedia-lookup"
+      },
+      {
+        "@type": "WebAPI",
+        "@id": "https://api.dbpedia-spotlight.org",
+        "name": "DBpedia Spotlight",
+        "description": "REST API for automatic annotation and entity linking of natural language text to DBpedia resources. Supports multi-language entity spotting and disambiguation.",
+        "url": "https://www.dbpedia.org/resources/spotlight/",
+        "endpointURL": "https://api.dbpedia-spotlight.org",
+        "documentation": "https://www.dbpedia.org/resources/spotlight/",
+        "codeRepository": "https://github.com/dbpedia/dbpedia-spotlight-model"
+      },
+      {
+        "@type": "WebAPI",
+        "@id": "https://dbpedia.org/resource",
+        "name": "DBpedia Linked Data",
+        "description": "HTTP Linked Data access to DBpedia resources via content negotiation. Dereference any DBpedia entity URI using an Accept header to retrieve RDF descriptions in JSON-LD, Turtle, N3, RDF/XML, N-Triples, or HTML.",
+        "url": "https://www.dbpedia.org/resources/linked-data/",
+        "endpointURL": "https://dbpedia.org/resource",
+        "documentation": "https://www.dbpedia.org/resources/linked-data/"
+      },
+      {
+        "@type": "WebAPI",
+        "@id": "https://live.dbpedia.org/sparql",
+        "name": "DBpedia Live",
+        "description": "Real-time SPARQL endpoint and Linked Data access over continuously updated DBpedia data derived from near-real-time Wikipedia edits. Processes approximately 105 Wikipedia page modifications per minute.",
+        "url": "https://www.dbpedia.org/resources/live/",
+        "endpointURL": "https://live.dbpedia.org/sparql",
+        "documentation": "https://www.dbpedia.org/resources/live/"
+      },
+      {
+        "@type": "WebAPI",
+        "@id": "https://databus.dbpedia.org",
+        "name": "DBpedia Databus",
+        "description": "Data cataloging, versioning, and publishing platform for DBpedia and community datasets. Exposes a SPARQL API for querying RDF metadata and a Search API for discovering published datasets.",
+        "url": "https://www.dbpedia.org/resources/databus/",
+        "endpointURL": "https://databus.dbpedia.org",
+        "documentation": "https://dbpedia.gitbook.io/databus",
+        "codeRepository": "https://github.com/dbpedia/databus"
+      }
+    ]
+  },
+  "publishingPrinciples": "https://www.dbpedia.org/resources/",
+  "blog": {
+    "@type": "Blog",
+    "url": "https://www.dbpedia.org/blog/",
+    "name": "DBpedia Blog"
+  }
+}
