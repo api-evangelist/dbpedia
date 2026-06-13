@@ -1,0 +1,95 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: DBpedia
+providerId: dbpedia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Linked Data
+  - Knowledge Graph
+  - SPARQL
+  - Open Data
+  - FinOps
+  - FOCUS
+description: >-
+  FOCUS-aligned FinOps profile for DBpedia. All public DBpedia APIs are free community
+  services with no monetary cost. Infrastructure cost for consumers arises only from
+  self-hosted deployments (compute, storage, egress). The Databus enables dataset downloads
+  to eliminate dependency on the public endpoints for production workloads.
+notes: >-
+  For organizations running self-hosted DBpedia/Virtuoso stacks, costs are primarily
+  infrastructure (VM/container compute, SSD storage for RDF datasets, and egress for initial
+  dataset download). A full DBpedia Virtuoso instance requires multi-hundred-GB storage.
+sources:
+  - https://www.dbpedia.org/resources/
+  - https://databus.dbpedia.org/
+  - https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: DBpedia Association / InfAI
+serviceCategory: Data and Analytics
+billingModel:
+  pricingCategory: Free / Open Source
+  billingFrequency: None
+  billingCurrency: N/A
+  chargeCategories:
+    - None (public service)
+focusColumns:
+  ServiceName: DBpedia APIs
+  ServiceCategory: Data and Analytics
+  ProviderName: DBpedia
+  PublisherName: DBpedia Association
+  InvoiceIssuerName: N/A
+  BillingCurrency: N/A
+  ChargeCategory: None
+meters:
+  - name: sparql_queries
+    description: SPARQL queries executed against the public endpoint (no charge, fair-use monitored).
+    unit: requests
+    aggregation: count
+    dimensions: [endpoint, ip]
+  - name: lookup_requests
+    description: Entity lookup and prefix search requests (no charge).
+    unit: requests
+    aggregation: count
+    dimensions: [endpoint]
+  - name: spotlight_annotations
+    description: Text annotation requests to the Spotlight REST API (no charge).
+    unit: requests
+    aggregation: count
+    dimensions: [endpoint, language]
+  - name: dataset_download_bytes
+    description: >-
+      Bytes transferred when downloading DBpedia datasets from Databus
+      (relevant for self-hosted deployments — egress cost from hosting provider).
+    unit: bytes
+    aggregation: sum
+    dimensions: [dataset, version]
+principles:
+  - name: Visibility
+    description: >-
+      There is no usage dashboard for public DBpedia APIs. Track query volume at the
+      application layer using local metrics/logging to understand load on the public endpoints.
+  - name: Allocation
+    description: >-
+      For self-hosted deployments, allocate infrastructure costs (compute + storage)
+      by workload or team using standard cloud tagging; there are no per-query charges.
+  - name: Optimization
+    description: >-
+      Add LIMIT and OFFSET to all SPARQL queries to stay under the 10,000-row limit.
+      Use the Databus to load a local Virtuoso instance for high-volume or latency-sensitive
+      use cases rather than hitting the public endpoint.
+  - name: Accountability
+    description: >-
+      Respect the fair-use policy. For production traffic, download datasets from Databus
+      and operate a self-hosted instance. Monitor self-hosted infrastructure spend as you
+      would any data workload.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

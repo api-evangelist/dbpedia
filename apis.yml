@@ -1,0 +1,183 @@
+aid: dbpedia
+url: https://raw.githubusercontent.com/api-evangelist/dbpedia/refs/heads/main/apis.yml
+name: DBpedia
+kind: open-source
+description: >-
+  DBpedia is a community project that extracts structured data from Wikipedia and publishes it
+  as Linked Open Data on the Web. It provides a SPARQL endpoint, a Lookup Service for entity
+  resolution, a Spotlight API for text annotation, a Live endpoint for real-time Wikipedia
+  data, and Linked Data access via HTTP content negotiation — forming a queryable cross-linked
+  knowledge graph of Wikipedia-derived facts.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Linked Data
+  - Knowledge Graph
+  - SPARQL
+  - Semantic Web
+  - Wikipedia
+  - Open Data
+  - Entity Linking
+  - RDF
+  - Ontology
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+apis:
+  - aid: dbpedia:sparql
+    name: DBpedia SPARQL Endpoint
+    description: >-
+      Public SPARQL 1.1 query endpoint backed by OpenLink Virtuoso over the DBpedia knowledge
+      graph derived from Wikipedia. Supports up to 10,000 result rows, 120-second query
+      timeout, and 100 requests/second per IP. Returns data in HTML, XML, JSON, Turtle,
+      RDF/XML, N-Triples, CSV, and TSV. Loads the Databus Latest Core Collection for
+      continuous updates.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/sparql/
+    baseURL: https://dbpedia.org/sparql
+    tags:
+      - SPARQL
+      - Knowledge Graph
+      - RDF
+      - Wikipedia
+      - Linked Data
+      - Semantic Web
+    properties:
+      - type: Documentation
+        url: https://www.dbpedia.org/resources/sparql/
+      - type: TermsOfService
+        url: https://www.dbpedia.org/resources/sparql/
+
+  - aid: dbpedia:lookup
+    name: DBpedia Lookup Service
+    description: >-
+      REST API for entity retrieval and auto-complete over the DBpedia knowledge graph.
+      Resolves plain-text keywords to DBpedia resource URIs. Supports keyword search
+      (/api/search) and prefix/auto-complete search (/api/prefix). Query parameters include
+      query, type (DBpedia ontology class filter), and maxResults. Responses available in
+      XML (default) and JSON with result highlighting.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/lookup/
+    baseURL: https://lookup.dbpedia.org/api
+    tags:
+      - Entity Lookup
+      - Auto-Complete
+      - Knowledge Graph
+      - REST
+      - Entity Resolution
+    properties:
+      - type: Documentation
+        url: https://www.dbpedia.org/resources/lookup/
+      - type: GitHub
+        url: https://github.com/dbpedia/dbpedia-lookup
+
+  - aid: dbpedia:spotlight
+    name: DBpedia Spotlight
+    description: >-
+      REST API for automatic annotation and entity linking of natural language text to DBpedia
+      resources. Accepts text via HTTP GET or POST and returns mentions linked to DBpedia URIs.
+      Supports multi-language entity spotting and disambiguation. Output formats include XML,
+      JSON, Turtle, N-Triples, and RDF/XML. Can also be self-hosted via Docker.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/spotlight/
+    baseURL: https://api.dbpedia-spotlight.org
+    tags:
+      - Entity Linking
+      - Text Annotation
+      - NLP
+      - REST
+      - Knowledge Graph
+      - Named Entity Recognition
+    properties:
+      - type: Documentation
+        url: https://www.dbpedia.org/resources/spotlight/
+      - type: GitHub
+        url: https://github.com/dbpedia/dbpedia-spotlight-model
+
+  - aid: dbpedia:linked-data
+    name: DBpedia Linked Data
+    description: >-
+      HTTP Linked Data access to DBpedia resources via content negotiation. Dereference any
+      DBpedia entity URI (http://dbpedia.org/resource/{EntityName}) using an Accept header to
+      retrieve RDF descriptions in JSON-LD, Turtle, N3, RDF/XML, N-Triples, or HTML. Redirects
+      via 303 See Other to format-specific document URIs (e.g. /data/Berlin.ttl).
+      Language-specific chapters available (e.g. http://es.dbpedia.org/resource/).
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/linked-data/
+    baseURL: https://dbpedia.org/resource
+    tags:
+      - Linked Data
+      - RDF
+      - Content Negotiation
+      - Semantic Web
+      - HTTP
+      - Knowledge Graph
+    properties:
+      - type: Documentation
+        url: https://www.dbpedia.org/resources/linked-data/
+
+  - aid: dbpedia:live
+    name: DBpedia Live
+    description: >-
+      Real-time SPARQL endpoint and Linked Data access over continuously updated DBpedia data
+      derived from near-real-time Wikipedia edits. SPARQL endpoint at
+      http://live.dbpedia.org/sparql. Provides 19 types of Wikipedia content including
+      abstracts, images, person data, and external links. Processes approximately 105 Wikipedia
+      page modifications per minute. Changesets available for download.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/live/
+    baseURL: https://live.dbpedia.org/sparql
+    tags:
+      - Real-Time
+      - SPARQL
+      - Wikipedia
+      - Knowledge Graph
+      - Live Data
+      - RDF
+    properties:
+      - type: Documentation
+        url: https://www.dbpedia.org/resources/live/
+
+  - aid: dbpedia:databus
+    name: DBpedia Databus
+    description: >-
+      Data cataloging, versioning, and publishing platform for DBpedia and community datasets.
+      Exposes a SPARQL API for querying RDF metadata and a Search API for discovering
+      published datasets. Data metadata is signed with X.509 certificates and WebID for
+      provenance. Programmatic access via the Databus Client tool and HTTP API. Supports
+      automated publishing pipelines.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.dbpedia.org/resources/databus/
+    baseURL: https://databus.dbpedia.org
+    tags:
+      - Data Catalog
+      - Dataset Discovery
+      - SPARQL
+      - RDF
+      - Versioning
+      - Open Data
+    properties:
+      - type: Documentation
+        url: https://dbpedia.gitbook.io/databus
+      - type: GitHub
+        url: https://github.com/dbpedia/databus
+
+common:
+  - type: Website
+    url: https://www.dbpedia.org/
+  - type: Documentation
+    url: https://www.dbpedia.org/resources/
+  - type: GitHub
+    url: https://github.com/dbpedia
+  - type: Forum
+    url: https://forum.dbpedia.org/
+  - type: Blog
+    url: https://www.dbpedia.org/blog/
+  - type: Plans
+    url: plans/dbpedia-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/dbpedia-rate-limits.yml
+  - type: FinOps
+    url: finops/dbpedia-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

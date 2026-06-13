@@ -1,0 +1,80 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: DBpedia
+providerId: dbpedia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - SPARQL
+  - Knowledge Graph
+  - Linked Data
+  - Rate Limiting
+description: >-
+  DBpedia publishes explicit fair-use limits for the public SPARQL endpoint. The Lookup,
+  Spotlight, and Live endpoints do not document specific rate limits but operate under a
+  community fair-use expectation. Heavy usage is directed toward self-hosted deployments
+  using Docker images and dataset downloads from the Databus.
+notes: >-
+  Queries that time out return HTTP 200 with partial results — not an error. Queries exceeding
+  row limits similarly return HTTP 200 with truncated results. Callers should check result
+  completeness independently.
+sources:
+  - https://www.dbpedia.org/resources/sparql/
+  - https://www.dbpedia.org/resources/lookup/
+responseCodes:
+  throttled: 429
+limits:
+  - name: SPARQL Max Result Rows
+    scope: query
+    metric: rows-per-query
+    limit: 10000
+    notes: Queries returning more rows are silently truncated; response is HTTP 200.
+  - name: SPARQL Query Timeout
+    scope: query
+    metric: seconds-per-query
+    limit: 120
+    notes: Timed-out queries return partial results with HTTP 200, not an error.
+  - name: SPARQL Parallel Connections per IP
+    scope: ip
+    metric: concurrent-connections
+    limit: 50
+    notes: Applies to the public dbpedia.org/sparql endpoint.
+  - name: SPARQL Request Rate per IP
+    scope: ip
+    metric: requests-per-second
+    limit: 100
+    burstLimit: 120
+    notes: Sustained 100 req/sec; burst up to 120 req/sec allowed.
+  - name: Lookup Service
+    scope: global
+    metric: requests-per-second
+    limit: unspecified
+    notes: No documented limit; fair-use expected. Self-host via Docker for heavy workloads.
+  - name: Spotlight Annotation
+    scope: global
+    metric: requests-per-second
+    limit: unspecified
+    notes: No documented limit; fair-use expected. Self-host via Docker for heavy workloads.
+  - name: DBpedia Live SPARQL
+    scope: global
+    metric: requests-per-second
+    limit: unspecified
+    notes: No documented limit; real-time updates ~105 pages/minute processed.
+policies:
+  - name: Fair Use
+    description: >-
+      DBpedia public endpoints are community resources. High-volume or continuous querying
+      should be done against a local Virtuoso instance loaded with datasets from the Databus.
+  - name: Result Truncation
+    description: >-
+      Partial results are returned (HTTP 200) for queries exceeding the row limit or timeout.
+      Always verify result set size and consider adding LIMIT clauses to SPARQL queries.
+  - name: Self-Hosting Preference
+    description: >-
+      Production applications are encouraged to download the DBpedia dataset from
+      https://databus.dbpedia.org/ and run a local OpenLink Virtuoso instance.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,102 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: DBpedia
+providerId: dbpedia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Linked Data
+  - Knowledge Graph
+  - SPARQL
+  - Open Data
+  - Plans
+description: >-
+  DBpedia is a community open-source project; all public API services (SPARQL endpoint, Lookup,
+  Spotlight, Live, Linked Data, and Databus) are provided free of charge under open data
+  principles. No commercial plans or paid tiers are offered. Self-hosted deployment options
+  are available for all major services via Docker. The project is sustained by community
+  contributions, academic partnerships, and sponsorships from InfAI and others.
+notes: >-
+  Fair-use policies apply to the public SPARQL endpoint (10,000 row limit, 120-second timeout,
+  50 parallel connections, 100 req/sec per IP). Heavy users are encouraged to download datasets
+  from Databus or run local Virtuoso instances.
+sources:
+  - https://www.dbpedia.org/resources/sparql/
+  - https://www.dbpedia.org/resources/lookup/
+  - https://www.dbpedia.org/resources/spotlight/
+  - https://www.dbpedia.org/resources/databus/
+plans:
+  - id: dbpedia-free-public
+    name: Free Public Access
+    type: free
+    description: >-
+      All DBpedia APIs are openly accessible at no cost. Covers SPARQL queries, Lookup entity
+      resolution, Spotlight text annotation, Linked Data dereferencing, Live real-time endpoint,
+      and Databus dataset discovery. Subject to fair-use rate limits on the public SPARQL
+      endpoint.
+    entries:
+      - label: SPARQL Queries
+        name: sparql_queries
+        type: free
+        metric: requests
+        limit: 100
+        timeFrame: second
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Lookup Requests
+        name: lookup_requests
+        type: free
+        metric: requests
+        limit: -1
+        timeFrame: unlimited
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Spotlight Annotations
+        name: spotlight_requests
+        type: free
+        metric: requests
+        limit: -1
+        timeFrame: unlimited
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: SPARQL Endpoint (dbpedia.org/sparql)
+      - name: Lookup Service (keyword + prefix search)
+      - name: Spotlight Entity Linking
+      - name: Linked Data HTTP Access
+      - name: DBpedia Live SPARQL
+      - name: Databus SPARQL and Search API
+  - id: dbpedia-self-hosted
+    name: Self-Hosted Deployment
+    type: free
+    description: >-
+      All DBpedia services (Virtuoso SPARQL, Lookup, Spotlight, Databus) can be self-hosted
+      using Docker images and dataset downloads from the Databus. No licensing fee; users
+      supply their own infrastructure.
+    entries:
+      - label: Self-Hosted License
+        name: self_hosted_license
+        type: free
+        metric: deployment
+        limit: -1
+        timeFrame: unlimited
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Virtuoso SPARQL (Docker)
+      - name: DBpedia Lookup (Docker)
+      - name: DBpedia Spotlight (Docker)
+      - name: DBpedia Databus (Docker / GitHub)
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
