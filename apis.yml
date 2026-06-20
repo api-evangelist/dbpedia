@@ -8,7 +8,7 @@ description: >-
   resolution, a Spotlight API for text annotation, a Live endpoint for real-time Wikipedia
   data, and Linked Data access via HTTP content negotiation — forming a queryable cross-linked
   knowledge graph of Wikipedia-derived facts.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Linked Data
   - Knowledge Graph
@@ -31,7 +31,7 @@ apis:
       timeout, and 100 requests/second per IP. Returns data in HTML, XML, JSON, Turtle,
       RDF/XML, N-Triples, CSV, and TSV. Loads the Databus Latest Core Collection for
       continuous updates.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/sparql/
     baseURL: https://dbpedia.org/sparql
     tags:
@@ -55,7 +55,7 @@ apis:
       (/api/search) and prefix/auto-complete search (/api/prefix). Query parameters include
       query, type (DBpedia ontology class filter), and maxResults. Responses available in
       XML (default) and JSON with result highlighting.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/lookup/
     baseURL: https://lookup.dbpedia.org/api
     tags:
@@ -77,7 +77,7 @@ apis:
       resources. Accepts text via HTTP GET or POST and returns mentions linked to DBpedia URIs.
       Supports multi-language entity spotting and disambiguation. Output formats include XML,
       JSON, Turtle, N-Triples, and RDF/XML. Can also be self-hosted via Docker.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/spotlight/
     baseURL: https://api.dbpedia-spotlight.org
     tags:
@@ -101,7 +101,7 @@ apis:
       retrieve RDF descriptions in JSON-LD, Turtle, N3, RDF/XML, N-Triples, or HTML. Redirects
       via 303 See Other to format-specific document URIs (e.g. /data/Berlin.ttl).
       Language-specific chapters available (e.g. http://es.dbpedia.org/resource/).
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/linked-data/
     baseURL: https://dbpedia.org/resource
     tags:
@@ -123,7 +123,7 @@ apis:
       http://live.dbpedia.org/sparql. Provides 19 types of Wikipedia content including
       abstracts, images, person data, and external links. Processes approximately 105 Wikipedia
       page modifications per minute. Changesets available for download.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/live/
     baseURL: https://live.dbpedia.org/sparql
     tags:
@@ -145,7 +145,7 @@ apis:
       published datasets. Data metadata is signed with X.509 certificates and WebID for
       provenance. Programmatic access via the Databus Client tool and HTTP API. Supports
       automated publishing pipelines.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.dbpedia.org/resources/databus/
     baseURL: https://databus.dbpedia.org
     tags:
