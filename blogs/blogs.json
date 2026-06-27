@@ -1,81 +1,13 @@
 {
-  "provider": "dbpedia",
-  "feed_url": "https://www.dbpedia.org/blog/feed/",
-  "last_fetched": "2026-06-13",
-  "posts": [
-    {
-      "title": "DBpedia \u2013 GSoC Bonding Period 2026",
-      "url": "https://www.dbpedia.org/blog/dbpedia-gsoc-bonding-period-2026/",
-      "date": "2026-05-07",
-      "summary": "\"Great job! You have been chosen as one of our GSoC contributor for the summer of 2026\" \u2014 welcoming new contributors to connect with the community and mentors.",
-      "author": null
-    },
-    {
-      "title": "News: Hindi DBpedia Chapter",
-      "url": "https://www.dbpedia.org/blog/news-hindi-dbpedia-chapter/",
-      "date": "2026-05-19",
-      "summary": "Announcement of the Hindi DBpedia Chapter expansion, led by Dr. Sanju Tiwari at https://hi.dbpedia.org/, building multilingual knowledge graphs from Hindi Wikipedia using semantic web and NLP techniques.",
-      "author": null
-    },
-    {
-      "title": "Recap: GSoC 2025 Summit",
-      "url": "https://www.dbpedia.org/blog/recap-gsoc-2025-summit/",
-      "date": "2025-12-08",
-      "summary": "Account of the GSoC Mentor Summit in Munich (Oct 22-25, 2025) with 133 organizations participating. Sanju Tiwari reflects on involvement as DAAD Postdoc and GSoC mentor since 2022.",
-      "author": "Sanju Tiwari"
-    },
-    {
-      "title": "My DBpedia Internship Journey",
-      "url": "https://www.dbpedia.org/blog/my-dbpedia-internship-journey/",
-      "date": "2025-12-04",
-      "summary": "Haniya Konain describes a four-month internship experience improving data quality in the DBpedia extraction framework, following GSoC completion.",
-      "author": "Haniya Konain"
-    },
-    {
-      "title": "Retrospective: Google Summer of Code 2025",
-      "url": "https://www.dbpedia.org/blog/retrospective-google-summer-of-code-2025/",
-      "date": "2025-09-16",
-      "summary": "DBpedia received 30 project proposals and supported developers for the 14th year in a row, with five finalists working on knowledge graphs, machine learning, and multilingual initiatives.",
-      "author": null
-    },
-    {
-      "title": "Recap: DBpedia Day in Vienna @ SEMANTiCS 2025",
-      "url": "https://www.dbpedia.org/blog/dbpedia-day-in-vienna-semantics-2025/",
-      "date": "2025-09-11",
-      "summary": "Up to 100 DBpedians attended the September 3rd community gathering in Vienna, Austria featuring keynotes and sessions on semantic web technologies.",
-      "author": null
-    },
-    {
-      "title": "CfP: KG operated by AI \u2013 DBpedia Day 2025",
-      "url": "https://www.dbpedia.org/blog/dbpedia-day-2025/",
-      "date": "2025-06-20",
-      "summary": "Call for presentations on intersections of large language models and knowledge graphs for DBpedia Day 2025. Submission deadline July 29.",
-      "author": null
-    },
-    {
-      "title": "Recap 2024: A Year with DBpedia",
-      "url": "https://www.dbpedia.org/blog/recap-2024-a-year-with-dbpedia/",
-      "date": "2024-12-17",
-      "summary": "Annual retrospective covering 17 years of DBpedia development, training sessions, and community events throughout 2024.",
-      "author": null
-    },
-    {
-      "title": "Retrospective: Google Summer of Code 2024",
-      "url": "https://www.dbpedia.org/blog/retrospective-google-summer-of-code-2024/",
-      "date": "2024-11-13",
-      "summary": "DBpedia received 22 project proposals with six selected contributors working on extraction and knowledge graph projects in GSoC 2024.",
-      "author": null
-    },
-    {
-      "title": "Recap: DBpedia Day in Amsterdam @ SEMANTiCS 2024",
-      "url": "https://www.dbpedia.org/blog/recap-dbpedia-day-in-amsterdam-semantics-2024/",
-      "date": "2024-09-19",
-      "summary": "Community event in Amsterdam featuring approximately 100 participants discussing AI applications and knowledge graph construction at SEMANTiCS 2024.",
-      "author": null
-    }
-  ],
   "repo": "dbpedia",
   "feeds": [
+    {
+      "source": "https://www.dbpedia.org/blog/feed/",
+      "feed_url": "https://www.dbpedia.org/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
     {
       "source": "https://forum.dbpedia.org/",
       "feed_url": "https://forum.dbpedia.org/",
@@ -84,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 10
 }

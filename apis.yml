@@ -168,7 +168,7 @@ common:
     url: https://www.dbpedia.org/resources/
   - type: GitHub
     url: https://github.com/dbpedia
-  - type: Forum
+  - type: Forums
     url: https://forum.dbpedia.org/
   - type: Blog
     url: https://www.dbpedia.org/blog/
