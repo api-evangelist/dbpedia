@@ -162,6 +162,8 @@ apis:
         url: https://github.com/dbpedia/databus
 
 common:
+  - type: DomainSecurity
+    url: security/dbpedia-domain-security.yml
   - type: Website
     url: https://www.dbpedia.org/
   - type: Documentation
