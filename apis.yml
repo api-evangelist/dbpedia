@@ -8,7 +8,19 @@ description: >-
   resolution, a Spotlight API for text annotation, a Live endpoint for real-time Wikipedia
   data, and Linked Data access via HTTP content negotiation — forming a queryable cross-linked
   knowledge graph of Wikipedia-derived facts.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dbpedia.png
 tags:
   - Linked Data
   - Knowledge Graph
