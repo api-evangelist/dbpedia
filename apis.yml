@@ -72,6 +72,12 @@ apis:
     baseURL: https://lookup.dbpedia.org/api
     tags:
       - Entity Lookup
+      - Autocomplete
+      - Knowledge Graph
+      - REST
+      - Entity Resolution
+    tags_raw:
+      - Entity Lookup
       - Auto-Complete
       - Knowledge Graph
       - REST
