@@ -83,7 +83,7 @@ apis:
     baseURL: https://lookup.dbpedia.org/api
     tags:
       - Entity Lookup
-      - Auto-Complete
+      - Autocomplete
       - Knowledge Graph
       - REST
       - Entity Resolution
