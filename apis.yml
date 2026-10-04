@@ -10,14 +10,20 @@ description: >-
   knowledge graph of Wikipedia-derived facts.
 deliveryModel:
   model: saas
-  open_source: false
+  license_evidence:
+    not_product:
+    - dbpedia/databus
+    - dbpedia/dbpedia-lookup
+    - dbpedia/dbpedia-spotlight-model
+  open_source: unknown
   commercial: true
   callable_host: false
   label: Hosted service · you call their endpoint
-  confidence: medium
+  confidence: low
   source:
   - pricing
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: free
