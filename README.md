@@ -1,4 +1,4 @@
-# DBpedia (dbpedia)
+# DBpedia
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,162 +66,106 @@
 
 DBpedia is a community project that extracts structured data from Wikipedia and publishes it as Linked Open Data on the Web. It provides a SPARQL endpoint, a Lookup Service for entity resolution, a Spotlight API for text annotation, a Live endpoint for real-time Wikipedia data, and Linked Data access via HTTP content negotiation — forming a queryable cross-linked knowledge graph of Wikipedia-derived facts.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/dbpedia/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/dbpedia/refs/heads/main/apis.yml)
+**Areas:** Linked Data · Knowledge Graph · SPARQL · Semantic Web · Wikipedia · Open Data · Entity Linking · RDF · Ontology
 
-## Tags
+## DBpedia on APIs.io
 
-- Linked Data
-- Knowledge Graph
-- SPARQL
-- Semantic Web
-- Wikipedia
-- Open Data
-- Entity Linking
-- RDF
-- Ontology
+Everything profiled for DBpedia is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dbpedia/](https://apis.io/providers/dbpedia/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (6)
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+- [DBpedia SPARQL Endpoint](https://apis.io/apis/dbpedia/sparql/) — Public SPARQL 1.1 query endpoint backed by OpenLink Virtuoso over the DBpedia knowledge graph derived from Wikipedia. Supports up to 10,000 result rows,…
+- [DBpedia Lookup Service](https://apis.io/apis/dbpedia/lookup/) — REST API for entity retrieval and auto-complete over the DBpedia knowledge graph. Resolves plain-text keywords to DBpedia resource URIs. Supports keyword…
+- [DBpedia Spotlight](https://apis.io/apis/dbpedia/spotlight/) — REST API for automatic annotation and entity linking of natural language text to DBpedia resources. Accepts text via HTTP GET or POST and returns mentions…
+- [DBpedia Linked Data](https://apis.io/apis/dbpedia/linked-data/) — HTTP Linked Data access to DBpedia resources via content negotiation. Dereference any DBpedia entity URI (http://dbpedia.org/resource/{EntityName}) using an…
+- [DBpedia Live](https://apis.io/apis/dbpedia/live/) — Real-time SPARQL endpoint and Linked Data access over continuously updated DBpedia data derived from near-real-time Wikipedia edits. SPARQL endpoint at…
+- [DBpedia Databus](https://apis.io/apis/dbpedia/databus/) — Data cataloging, versioning, and publishing platform for DBpedia and community datasets. Exposes a SPARQL API for querying RDF metadata and a Search API for…
 
-## APIs
+### Published properties
 
-### DBpedia SPARQL Endpoint
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Public SPARQL 1.1 query endpoint backed by OpenLink Virtuoso over the DBpedia knowledge graph derived from Wikipedia. Supports up to 10,000 result rows, 120-second query timeout, and 100 requests/second per IP. Returns data in HTML, XML, JSON, Turtle, RDF/XML, N-Triples, CSV, and TSV. Loads the Databus Latest Core Collection for continuous updates.
+#### Security (1)
 
-- **Human URL:** [https://www.dbpedia.org/resources/sparql/](https://www.dbpedia.org/resources/sparql/)
-- **Base URL:** `https://dbpedia.org/sparql`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Dbpedia Domain Security](https://apis.io/security/dbpedia/dbpedia-domain-security/)
 
-- SPARQL
-- Knowledge Graph
-- RDF
-- Wikipedia
-- Linked Data
-- Semantic Web
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://www.dbpedia.org/resources/sparql/)
-- [Terms of Service](https://www.dbpedia.org/resources/sparql/)
+- [Dbpedia Plans Pricing](https://apis.io/plans/dbpedia/dbpedia-plans-pricing/)
 
-### DBpedia Lookup Service
+#### Rate limits (1)
 
-REST API for entity retrieval and auto-complete over the DBpedia knowledge graph. Resolves plain-text keywords to DBpedia resource URIs. Supports keyword search (/api/search) and prefix/auto-complete search (/api/prefix). Query parameters include query, type (DBpedia ontology class filter), and maxResults. Responses available in XML (default) and JSON with result highlighting.
+Published request limits.
 
-- **Human URL:** [https://www.dbpedia.org/resources/lookup/](https://www.dbpedia.org/resources/lookup/)
-- **Base URL:** `https://lookup.dbpedia.org/api`
+- [Dbpedia Rate Limits](https://apis.io/rate-limits/dbpedia/dbpedia-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Entity Lookup
-- Auto-Complete
-- Knowledge Graph
-- REST
-- Entity Resolution
+What the API costs to run, by operation.
 
-#### Properties
+- [Dbpedia Finops](https://apis.io/finops/dbpedia/dbpedia-finops/)
 
-- [Documentation](https://www.dbpedia.org/resources/lookup/)
-- [Git Hub](https://github.com/dbpedia/dbpedia-lookup)
+## Where to find this API
 
-### DBpedia Spotlight
-
-REST API for automatic annotation and entity linking of natural language text to DBpedia resources. Accepts text via HTTP GET or POST and returns mentions linked to DBpedia URIs. Supports multi-language entity spotting and disambiguation. Output formats include XML, JSON, Turtle, N-Triples, and RDF/XML. Can also be self-hosted via Docker.
-
-- **Human URL:** [https://www.dbpedia.org/resources/spotlight/](https://www.dbpedia.org/resources/spotlight/)
-- **Base URL:** `https://api.dbpedia-spotlight.org`
-
-#### Tags
-
-- Entity Linking
-- Text Annotation
-- NLP
-- REST
-- Knowledge Graph
-- Named Entity Recognition
-
-#### Properties
-
-- [Documentation](https://www.dbpedia.org/resources/spotlight/)
-- [Git Hub](https://github.com/dbpedia/dbpedia-spotlight-model)
-
-### DBpedia Linked Data
-
-HTTP Linked Data access to DBpedia resources via content negotiation. Dereference any DBpedia entity URI (http://dbpedia.org/resource/{EntityName}) using an Accept header to retrieve RDF descriptions in JSON-LD, Turtle, N3, RDF/XML, N-Triples, or HTML. Redirects via 303 See Other to format-specific document URIs (e.g. /data/Berlin.ttl). Language-specific chapters available (e.g. http://es.dbpedia.org/resource/).
-
-- **Human URL:** [https://www.dbpedia.org/resources/linked-data/](https://www.dbpedia.org/resources/linked-data/)
-- **Base URL:** `https://dbpedia.org/resource`
-
-#### Tags
-
-- Linked Data
-- RDF
-- Content Negotiation
-- Semantic Web
-- HTTP
-- Knowledge Graph
-
-#### Properties
-
-- [Documentation](https://www.dbpedia.org/resources/linked-data/)
-
-### DBpedia Live
-
-Real-time SPARQL endpoint and Linked Data access over continuously updated DBpedia data derived from near-real-time Wikipedia edits. SPARQL endpoint at http://live.dbpedia.org/sparql. Provides 19 types of Wikipedia content including abstracts, images, person data, and external links. Processes approximately 105 Wikipedia page modifications per minute. Changesets available for download.
-
-- **Human URL:** [https://www.dbpedia.org/resources/live/](https://www.dbpedia.org/resources/live/)
-- **Base URL:** `https://live.dbpedia.org/sparql`
-
-#### Tags
-
-- Real-Time
-- SPARQL
-- Wikipedia
-- Knowledge Graph
-- Live Data
-- RDF
-
-#### Properties
-
-- [Documentation](https://www.dbpedia.org/resources/live/)
-
-### DBpedia Databus
-
-Data cataloging, versioning, and publishing platform for DBpedia and community datasets. Exposes a SPARQL API for querying RDF metadata and a Search API for discovering published datasets. Data metadata is signed with X.509 certificates and WebID for provenance. Programmatic access via the Databus Client tool and HTTP API. Supports automated publishing pipelines.
-
-- **Human URL:** [https://www.dbpedia.org/resources/databus/](https://www.dbpedia.org/resources/databus/)
-- **Base URL:** `https://databus.dbpedia.org`
-
-#### Tags
-
-- Data Catalog
-- Dataset Discovery
-- SPARQL
-- RDF
-- Versioning
-- Open Data
-
-#### Properties
-
-- [Documentation](https://dbpedia.gitbook.io/databus)
-- [Git Hub](https://github.com/dbpedia/databus)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.dbpedia.org/)
 - [Documentation](https://www.dbpedia.org/resources/)
-- [Git Hub](https://github.com/dbpedia)
-- [Forum](https://forum.dbpedia.org/)
 - [Blog](https://www.dbpedia.org/blog/)
-- [Plans](plans/dbpedia-plans-pricing.yml)
-- [Rate Limits](rate-limits/dbpedia-rate-limits.yml)
-- [Fin Ops](finops/dbpedia-finops.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 15.5 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.8** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dbpedia/](https://apis.io/providers/dbpedia/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DBpedia: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dbpedia/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
